@@ -1,4 +1,4 @@
-package com.tuany;
+package com.euclidcalculator;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.example.euclidcalculator;
+package com.euclidcalculator;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -3,6 +3,6 @@ module com.example.euclidcalculator {
     requires javafx.fxml;
 
 
-    opens com.example.euclidcalculator to javafx.fxml;
-    exports com.example.euclidcalculator;
+    opens com.euclidcalculator to javafx.fxml;
+    exports com.euclidcalculator;
 }
