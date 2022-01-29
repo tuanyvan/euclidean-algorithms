@@ -8,7 +8,7 @@ public class EuclidCalculatorController {
     private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() {
+    protected void onConfirmSelection() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 }

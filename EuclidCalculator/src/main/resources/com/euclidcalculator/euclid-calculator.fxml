@@ -3,12 +3,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.euclidcalculator.EuclidCalculatorController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.euclidcalculator.EuclidCalculatorController">
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
@@ -17,9 +20,7 @@
           <padding>
               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
           </padding>
-      
-          <Label fx:id="welcomeText" />
-          <Button onAction="#onHelloButtonClick" text="Hello!" />
+          <Button onAction="#onConfirmSelection" text="Confirm" />
       </VBox>
    </bottom>
    <top>
@@ -29,4 +30,22 @@
          </font>
       </Label>
    </top>
+   <center>
+      <GridPane alignment="CENTER" prefHeight="90.0" prefWidth="405.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.3333740234375" minWidth="10.0" prefWidth="315.3333740234375" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton mnemonicParsing="false" text="Find Greatest Common Denominator" GridPane.halignment="CENTER" />
+            <RadioButton mnemonicParsing="false" text="Decrypt Numeric " GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
 </BorderPane>
