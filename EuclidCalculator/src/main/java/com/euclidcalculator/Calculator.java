@@ -2,7 +2,7 @@ package com.euclidcalculator;
 
 import java.lang.Math;
 
-public class Euclid {
+public class Calculator {
 
     private static int factor = 1;
     private static int limit = 100;

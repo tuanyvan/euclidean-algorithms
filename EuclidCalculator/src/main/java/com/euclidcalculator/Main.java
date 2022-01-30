@@ -17,7 +17,7 @@ public class Main {
         int modulus;
         String selection;
 
-        // Call the Euclid method and an input from the user.
+        // Call the Calculator method and an input from the user.
         do {
             try {
                 System.out.println("Find decryption key (decryptkey) or GCD (gcd)?");
@@ -39,11 +39,11 @@ public class Main {
                     Arrays.sort(numbers);
 
                     // Assign a proper value to the GCD to start.
-                    gcd = Euclid.gcd(numbers[0], numbers[1]);
+                    gcd = Calculator.gcd(numbers[0], numbers[1]);
 
                     // For each of the elements in numbers (should there be more than two), find the GCD of the current GCD and every other number.
                     for (int i = 2; i < numbers.length; i++) {
-                        gcd = Euclid.gcd(gcd, numbers[i]);
+                        gcd = Calculator.gcd(gcd, numbers[i]);
                     }
 
                     // Print the result.
@@ -62,16 +62,16 @@ public class Main {
                     System.out.println("Limit the decryption key brute force count? Y/N");
                     String answer = input.nextLine().toLowerCase();
 
-                    // Check if the answer was yes. If so, then ask for a limit, then send to Euclid 3-param .findModulusOne().
+                    // Check if the answer was yes. If so, then ask for a limit, then send to Calculator 3-param .findModulusOne().
                     int result;
                     if(answer.equals("y") || answer.equals("yes")) {
                         System.out.print("Iteration Limit: ");
                         int limit = Integer.parseInt(input.nextLine());
-                        result = Euclid.findModulusOne(encryptionKey, modulus, limit);
+                        result = Calculator.findModulusOne(encryptionKey, modulus, limit);
                     }
-                    // Otherwise, send to Euclid 2-param .findModulusOne().
+                    // Otherwise, send to Calculator 2-param .findModulusOne().
                     else {
-                        result = Euclid.findModulusOne(encryptionKey, modulus);
+                        result = Calculator.findModulusOne(encryptionKey, modulus);
                     }
 
                     // If the return value was zero, the decryption key was not found.
